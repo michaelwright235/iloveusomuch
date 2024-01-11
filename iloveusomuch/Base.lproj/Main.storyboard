@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" userLabel="Main View Controller" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-YH-sMC" userLabel="Background">
+                                <rect key="frame" x="141.66666666666669" y="0.0" width="642.66666666666652" height="428"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VJe-YH-sMC" secondAttribute="height" multiplier="590:393" id="uQo-mo-t2h"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-la-ajX" userLabel="Contents Stack View">
+                                <rect key="frame" x="190" y="123.66666666666667" width="546" height="240.66666666666663"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKG-jo-3nz" userLabel="Play Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="546" height="139.33333333333334"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MKG-jo-3nz" secondAttribute="height" multiplier="902:230" id="7Cl-mC-h1s"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="play" destination="BYZ-38-t0r" eventType="touchDown" id="mzc-tE-Um0"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XX9-M0-b03">
+                                        <rect key="frame" x="0.0" y="147.33333333333331" width="546" height="93.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-31-EVu" userLabel="Share Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="93.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="tfW-31-EVu" secondAttribute="height" multiplier="446:155" id="lBt-Xs-iaN"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="share"/>
+                                                <connections>
+                                                    <action selector="share" destination="BYZ-38-t0r" eventType="touchDown" id="oei-Ah-MBF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOM-VT-roO" userLabel="Listen Button">
+                                                <rect key="frame" x="277" y="0.0" width="269" height="93.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="GOM-VT-roO" secondAttribute="height" multiplier="446:155" id="Paa-pi-N1C"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="listen"/>
+                                                <connections>
+                                                    <action selector="listen" destination="BYZ-38-t0r" eventType="touchDown" id="hJa-2m-Bpa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MKG-jo-3nz" firstAttribute="width" secondItem="YXm-la-ajX" secondAttribute="width" id="ASW-ws-F7m"/>
+                                    <constraint firstItem="XX9-M0-b03" firstAttribute="width" secondItem="YXm-la-ajX" secondAttribute="width" id="fP3-a2-kXf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dtc-O9-sO1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YXm-la-ajX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="Nek-Fg-NTu"/>
+                            <constraint firstItem="YXm-la-ajX" firstAttribute="width" secondItem="VJe-YH-sMC" secondAttribute="width" multiplier="0.85" id="PLY-Iq-40K"/>
+                            <constraint firstItem="VJe-YH-sMC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ne5-Nc-E4Z"/>
+                            <constraint firstItem="VJe-YH-sMC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tRK-sM-Ab1"/>
+                            <constraint firstAttribute="bottom" secondItem="VJe-YH-sMC" secondAttribute="bottom" id="vk0-aL-NjY"/>
+                            <constraint firstItem="YXm-la-ajX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vzb-Lc-HuS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="VJe-YH-sMC" id="bUH-wc-dNo"/>
+                        <outlet property="contents" destination="YXm-la-ajX" id="4q4-ES-VRH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107.49625187406298" y="-39.200000000000003"/>
+        </scene>
+        <!--Videos View Controller-->
+        <scene sceneID="SQk-Q8-ZOp">
+            <objects>
+                <viewController storyboardIdentifier="VideosViewController" id="i63-Re-Vhy" userLabel="Videos View Controller" customClass="VideosViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRD-7v-qLw">
+                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMM-4K-fVb" userLabel="Video View" customClass="VideoView">
+                                <rect key="frame" x="142" y="0.0" width="642" height="428"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iMM-4K-fVb" secondAttribute="height" multiplier="960:640" id="lrh-ox-HPA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cNZ-aw-LLS"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="centerY" secondItem="nRD-7v-qLw" secondAttribute="centerY" id="8ua-5L-FG6"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="centerX" secondItem="nRD-7v-qLw" secondAttribute="centerX" id="XAb-bD-2yy"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="width" relation="lessThanOrEqual" secondItem="nRD-7v-qLw" secondAttribute="width" id="bPU-Dp-WOm"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="height" secondItem="nRD-7v-qLw" secondAttribute="height" id="pNH-hg-lzT"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="videoView" destination="iMM-4K-fVb" id="zgF-sW-qvi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJ2-bc-bzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.044642857142856" y="-752.17391304347836"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="720" height="480"/>
+        <image name="listen" width="446" height="154.5"/>
+        <image name="play" width="902" height="230"/>
+        <image name="share" width="446" height="154.5"/>
+    </resources>
+</document>
