@@ -78,8 +78,11 @@
             CGPoint touchPoint = [(UITouch*)[touches anyObject] locationInView: self];
             CGPoint point = [[self videosPlayer] convertPoint:touchPoint fromLayer: self.layer];
 
-            float f1 = -floorf(point.x / [self bounds].size.width * 2) * [self bounds].size.width;
-            float f2 = -floorf(point.y / [self bounds].size.height * 2) * [self bounds].size.height;
+            float column = floorf(point.x / [self bounds].size.width * 2);
+            float row = floorf(point.y / [self bounds].size.height * 2);
+
+            float f1 = -column * [self bounds].size.width;
+            float f2 = -row * [self bounds].size.height;
 
             [UIView
              animateWithDuration: ANIMATION_DURATION
