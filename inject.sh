@@ -10,19 +10,19 @@ ORIGINAL_IPA_URL="https://archive.org/download/i-3-u-so-com.julienadam.cassius-1
 ORIGINAL_ICON_URL="https://web.archive.org/web/20240111215624if_/https://is4-ssl.mzstatic.com/image/thumb/Purple/2b/df/56/mzi.rptjtlhi.png/738x0w.png"
 IPA_NAME="iloveusomuch.ipa"
 
+ORIGINAL_ZIP_PATH="Payload/Cassius.app/"
+ORIGINAL_ZIP_FILES=(
+"${ORIGINAL_ZIP_PATH}background.png"
+"${ORIGINAL_ZIP_PATH}loader@2x.png"
+"${ORIGINAL_ZIP_PATH}Loader.m4v"
+"${ORIGINAL_ZIP_PATH}Videos.m4v"
+)
+
 if [ "$1" == "project" ]; then
     OUT_DIR="./iloveusomuch/originalAssets"
 else
     OUT_DIR="./Payload/iloveusomuch.app"
 fi
-
-zipPath="Payload/Cassius.app/"
-zipFiles=(
-"${zipPath}background.png"
-"${zipPath}loader@2x.png"
-"${zipPath}Loader.m4v"
-"${zipPath}Videos.m4v"
-)
 
 # Suggest downloading the original ipa file if it doesn't exit
 if ! [ -f "./$ORIGINAL_IPA_NAME" ]; then
@@ -51,7 +51,7 @@ fi
 
 # Check if the required files are in place
 givenZipFileList=`unzip -Z1 $ORIGINAL_IPA_NAME`
-for file in ${zipFiles[@]}; do
+for file in ${ORIGINAL_ZIP_FILES[@]}; do
     if ! echo "$givenZipFileList" | grep $file >> /dev/null; then
         echo "'$file' not found. Are you sure that you're using the correct .ipa file?"
         exit 1
@@ -64,7 +64,7 @@ fi
 
 # Create an argument for unzip to extract only these files
 zipFilesArg=""
-for file in ${zipFiles[@]}; do
+for file in ${ORIGINAL_ZIP_FILES[@]}; do
     zipFilesArg="${zipFilesArg} ${file}"
 done
 
