@@ -28,7 +28,7 @@ fi
 if ! [ -f "./$ORIGINAL_IPA_NAME" ]; then
     echo "The original.ipa file doesn't exist. This script can automatically download it from archive.org."
     echo "Note: this file contains copyrighted materials that will be injected into the resulting app."
-    echo "\033[0;31m$(tput bold)You CANNOT distribute the resulting $IPA_NAME file in any way. For personal use only.$(tput sgr0)\033[0m"
+    printf "\033[0;31m$(tput bold)You CANNOT distribute the resulting $IPA_NAME file in any way. For personal use only.$(tput sgr0)\033[0m\n"
     while [ "$choice" != "n" ] && [ "$choice" != "y" ]; do
         printf "Do you want to continue? [y/n]: "
         read choice
@@ -44,6 +44,7 @@ if ! [ -f "./$ORIGINAL_IPA_NAME" ]; then
     fi
 fi
 
+# Check file's checksum
 if [ "`openssl dgst -sha256 "./$ORIGINAL_IPA_NAME" | sed -E 's/SHA(2-)?256(.*)= //'`" != "$ORIGINAL_IPA_SHA256" ]; then
     echo "$ORIGINAL_IPA_NAME has an unexpected checksum. Try downloading it again."
     exit 1
@@ -95,4 +96,4 @@ echo "Injecting files into iloveusomuch.ipa..."
 zip -ru "$IPA_NAME" Payload > /dev/null
 rm -R ./Payload
 
-echo "\nIPA is ready!"
+printf "\nIPA is ready!\n"
