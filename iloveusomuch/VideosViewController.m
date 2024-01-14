@@ -4,6 +4,7 @@
 
 #define ANIMATION_DURATION 0.3
 #define ANIMATION_CURVE UIViewAnimationOptionCurveEaseOut
+#define CROP_VIDEOS_PX 2
 
 @implementation VideoView
 @synthesize videosPlayer;
@@ -239,6 +240,19 @@
                 setCategory: AVAudioSessionCategoryPlayback
                 error: nil];
     [self.videosPlayer setFrame: newBounds];
+
+    // Videos are not perfectly aligned. When zoomed in, sometimes there are visible lines
+    // of adjacent videos on the endges. We can set a mask, to hide some pixels from each side
+    CAShapeLayer* levelLayer = [CAShapeLayer layer];
+    UIBezierPath* path = [UIBezierPath bezierPathWithRect:
+                          CGRectMake([[self videoView] bounds].origin.x + CROP_VIDEOS_PX,
+                           [[self videoView] bounds].origin.y + CROP_VIDEOS_PX,
+                           [[self videoView] bounds].size.width - CROP_VIDEOS_PX * 2,
+                           [[self videoView] bounds].size.height - CROP_VIDEOS_PX * 2)
+    ];
+    [levelLayer setPath: path.CGPath];
+    [[[self videoView] layer] setMask: levelLayer];
+
     [[self.videosPlayer player] play];
 }
 
