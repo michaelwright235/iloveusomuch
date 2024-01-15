@@ -72,10 +72,15 @@
     [[[[UIApplication sharedApplication] windows] firstObject] setRootViewController: vc];
 }
 
-- (IBAction)share {
+- (IBAction)share: (UIButton*)sender {
     // Opens a share screen with a link of this project
     NSURL *url = [NSURL URLWithString: SHARE_URL];
     UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:nil];
+
+    // Required for iPads
+    [[vc popoverPresentationController] setSourceView: (UIView*)sender];
+    [[vc popoverPresentationController] setSourceRect: sender.frame];
+
     [self presentViewController:vc animated:YES completion:nil];
 }
 

@@ -10,7 +10,7 @@
 }
 
 - (IBAction)play;
-- (IBAction)share;
+- (IBAction)share: (UIButton*)sender;
 - (IBAction)listen;
 - (void)didEnterBackground:(NSNotification *)notification;
 - (void)willEnterForeground:(NSNotification *)notification;
