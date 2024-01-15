@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -13,20 +13,17 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" userLabel="Main View Controller" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="VJe-YH-sMC" userLabel="Background">
-                                <rect key="frame" x="141.66666666666669" y="0.0" width="642.66666666666652" height="428"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="VJe-YH-sMC" secondAttribute="height" multiplier="590:393" id="uQo-mo-t2h"/>
-                                </constraints>
+                                <rect key="frame" x="137.66666666666663" y="0.0" width="621" height="414"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-la-ajX" userLabel="Contents Stack View">
-                                <rect key="frame" x="190" y="123.66666666666667" width="546" height="240.66666666666663"/>
+                                <rect key="frame" x="184" y="120.66666666666669" width="528" height="232.66666666666663"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKG-jo-3nz" userLabel="Play Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="546" height="139.33333333333334"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKG-jo-3nz" userLabel="Play Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="528" height="134.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="MKG-jo-3nz" secondAttribute="height" multiplier="902:230" id="7Cl-mC-h1s"/>
                                         </constraints>
@@ -37,10 +34,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XX9-M0-b03">
-                                        <rect key="frame" x="0.0" y="147.33333333333331" width="546" height="93.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="142.33333333333331" width="528" height="90.333333333333314"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-31-EVu" userLabel="Share Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="269" height="93.333333333333329"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-31-EVu" userLabel="Share Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="90.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tfW-31-EVu" secondAttribute="height" multiplier="446:155" id="lBt-Xs-iaN"/>
                                                 </constraints>
@@ -50,8 +47,8 @@
                                                     <action selector="share" destination="BYZ-38-t0r" eventType="touchDown" id="oei-Ah-MBF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOM-VT-roO" userLabel="Listen Button">
-                                                <rect key="frame" x="277" y="0.0" width="269" height="93.333333333333329"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOM-VT-roO" userLabel="Listen Button">
+                                                <rect key="frame" x="268" y="0.0" width="260" height="90.333333333333329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GOM-VT-roO" secondAttribute="height" multiplier="446:155" id="Paa-pi-N1C"/>
                                                 </constraints>
@@ -62,24 +59,59 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="16"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="MKG-jo-3nz" firstAttribute="width" secondItem="YXm-la-ajX" secondAttribute="width" id="ASW-ws-F7m"/>
                                     <constraint firstItem="XX9-M0-b03" firstAttribute="width" secondItem="YXm-la-ajX" secondAttribute="width" id="fP3-a2-kXf"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="16"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dtc-O9-sO1"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YXm-la-ajX" firstAttribute="centerY" secondItem="VJe-YH-sMC" secondAttribute="centerY" constant="70" id="94E-Da-2gn"/>
                             <constraint firstItem="YXm-la-ajX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="Nek-Fg-NTu"/>
                             <constraint firstItem="YXm-la-ajX" firstAttribute="width" secondItem="VJe-YH-sMC" secondAttribute="width" multiplier="0.85" id="PLY-Iq-40K"/>
+                            <constraint firstItem="VJe-YH-sMC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.5" id="Tgf-GT-fUd"/>
+                            <constraint firstItem="VJe-YH-sMC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Xc3-IC-tiZ"/>
                             <constraint firstItem="VJe-YH-sMC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ne5-Nc-E4Z"/>
+                            <constraint firstItem="VJe-YH-sMC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.85" id="p8f-lm-vac"/>
                             <constraint firstItem="VJe-YH-sMC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tRK-sM-Ab1"/>
                             <constraint firstAttribute="bottom" secondItem="VJe-YH-sMC" secondAttribute="bottom" id="vk0-aL-NjY"/>
                             <constraint firstItem="YXm-la-ajX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vzb-Lc-HuS"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="p8f-lm-vac"/>
+                                <exclude reference="Tgf-GT-fUd"/>
+                                <exclude reference="Xc3-IC-tiZ"/>
+                                <exclude reference="Nek-Fg-NTu"/>
+                                <exclude reference="94E-Da-2gn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Tgf-GT-fUd"/>
+                                <include reference="Xc3-IC-tiZ"/>
+                                <include reference="Nek-Fg-NTu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Tgf-GT-fUd"/>
+                                <include reference="Xc3-IC-tiZ"/>
+                                <include reference="Nek-Fg-NTu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="p8f-lm-vac"/>
+                                <include reference="94E-Da-2gn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="background" destination="VJe-YH-sMC" id="bUH-wc-dNo"/>
@@ -95,25 +127,49 @@
             <objects>
                 <viewController storyboardIdentifier="VideosViewController" id="i63-Re-Vhy" userLabel="Videos View Controller" customClass="VideosViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nRD-7v-qLw">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="428"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMM-4K-fVb" userLabel="Video View" customClass="VideoView">
-                                <rect key="frame" x="142" y="0.0" width="642" height="428"/>
+                                <rect key="frame" x="137.66666666666663" y="0.0" width="621" height="414"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iMM-4K-fVb" secondAttribute="height" multiplier="960:640" id="lrh-ox-HPA"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cNZ-aw-LLS"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="iMM-4K-fVb" firstAttribute="centerY" secondItem="nRD-7v-qLw" secondAttribute="centerY" id="8ua-5L-FG6"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="height" secondItem="nRD-7v-qLw" secondAttribute="width" multiplier="0.67" id="Utz-1p-qnp"/>
                             <constraint firstItem="iMM-4K-fVb" firstAttribute="centerX" secondItem="nRD-7v-qLw" secondAttribute="centerX" id="XAb-bD-2yy"/>
-                            <constraint firstItem="iMM-4K-fVb" firstAttribute="width" relation="lessThanOrEqual" secondItem="nRD-7v-qLw" secondAttribute="width" id="bPU-Dp-WOm"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="width" secondItem="nRD-7v-qLw" secondAttribute="height" multiplier="1.5" id="aW0-z7-vBh"/>
                             <constraint firstItem="iMM-4K-fVb" firstAttribute="height" secondItem="nRD-7v-qLw" secondAttribute="height" id="pNH-hg-lzT"/>
+                            <constraint firstItem="iMM-4K-fVb" firstAttribute="width" secondItem="nRD-7v-qLw" secondAttribute="width" id="x7r-Tt-XaM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="x7r-Tt-XaM"/>
+                                <exclude reference="aW0-z7-vBh"/>
+                                <exclude reference="Utz-1p-qnp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="aW0-z7-vBh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="aW0-z7-vBh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="x7r-Tt-XaM"/>
+                                <exclude reference="aW0-z7-vBh"/>
+                                <include reference="Utz-1p-qnp"/>
+                                <exclude reference="pNH-hg-lzT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
