@@ -1,7 +1,7 @@
 #import "ViewController.h"
 #import <AVKit/AVKit.h>
 
-#define SHARE_URL @""
+#define SHARE_URL @"https://github.com/michaelwright235/iloveusomuch"
 #define APPLE_MUSIC_URL @"https://music.apple.com/us/album/i-3-u-so/442021273?i=442021277"
 #define SPOTIFY_URL @"https://open.spotify.com/track/0WWBeDKdXmGbZD1XVOVqot"
 #define YOUTUBE_MUSIC_URL @"https://music.youtube.com/watch?v=_jwVM3vdJ8k"
