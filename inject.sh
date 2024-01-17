@@ -24,18 +24,19 @@ else
     OUT_DIR="./Payload/iloveusomuch.app"
 fi
 
-# Suggest downloading the original ipa file if it doesn't exit
+echo "This script injects assets from the original app into an .ipa file or the Xcode project itself."
+echo "The original app files are going to be downladed. Those files contain copyrighted materials."
+printf "\033[0;31m$(tput bold)You CANNOT distribute the resulting $IPA_NAME file in any way. For personal use only.$(tput sgr0)\033[0m\n"
+while [ "$choice" != "n" ] && [ "$choice" != "y" ]; do
+    printf "Do you want to continue? [y/n]: "
+    read choice
+done
+if [ "$choice" == "n" ]; then
+    exit 0
+fi
+
+# Download the original ipa file if it doesn't exit
 if ! [ -f "./$ORIGINAL_IPA_NAME" ]; then
-    echo "The original.ipa file doesn't exist. This script can automatically download it from archive.org."
-    echo "Note: this file contains copyrighted materials that will be injected into the resulting app."
-    printf "\033[0;31m$(tput bold)You CANNOT distribute the resulting $IPA_NAME file in any way. For personal use only.$(tput sgr0)\033[0m\n"
-    while [ "$choice" != "n" ] && [ "$choice" != "y" ]; do
-        printf "Do you want to continue? [y/n]: "
-        read choice
-    done
-    if [ "$choice" == "n" ]; then
-        exit 0
-    fi
     echo "Downloading the original app..."
     curl -SLo "./$ORIGINAL_IPA_NAME" "$ORIGINAL_IPA_URL"
     if ! [ $? = 0 ]; then
