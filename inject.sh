@@ -47,7 +47,7 @@ fi
 
 # Check file's checksum
 if [ "`openssl dgst -sha256 "./$ORIGINAL_IPA_NAME" | sed -E 's/SHA(2-)?256(.*)= //'`" != "$ORIGINAL_IPA_SHA256" ]; then
-    echo "$ORIGINAL_IPA_NAME has an unexpected checksum. Try downloading it again."
+    echo "$ORIGINAL_IPA_NAME has an unexpected checksum. Remove it and run the script it again."
     exit 1
 fi
 
