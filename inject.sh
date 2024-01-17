@@ -95,6 +95,11 @@ fi
 # Inject files into a compiled .ipa
 echo "Injecting files into iloveusomuch.ipa..."
 zip -ru "$IPA_NAME" Payload > /dev/null
+if ! [ $? = 0 ]; then
+    echo "Failed to inject files into .ipa"
+    rm -R ./Payload
+    exit 1
+fi;
 rm -R ./Payload
 
 printf "\nIPA is ready!\n"
