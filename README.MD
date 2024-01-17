@@ -18,7 +18,7 @@ Every iOS app is contained inside a special `.ipa` file. You need to "make" one 
 1. Create a temporary directory on your computer, let's call it `iloveusomuch` and locate it on your Desktop.
 2. Open Terminal app.
 3. If you created a directory with a path from the first step, run `cd ~/Desktop/iloveusomuch` command.
-4. Run `curl -sSL "https://raw.githubusercontent.com/michaelwright235/iloveusomuch/master/inject.sh | sh"` command.
+4. Run `sh -c "$(curl -sSL "https://raw.githubusercontent.com/michaelwright235/iloveusomuch/master/inject.sh")"` command.
 5. Read an appeared message carefully. If you agree, type `y` and press Enter.
 6. Downloading necessary files and injecting them may take a while.
 7. After a successful injecting you can find an `iloveusomuch.ipa` file in a directory from the first step. This is a file you need to sideload onto your device.
