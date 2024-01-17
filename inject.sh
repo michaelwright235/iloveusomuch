@@ -9,6 +9,7 @@ ORIGINAL_IPA_SHA256="187253d4aa1c951af95957a49b926cfb7be4e953af578b6963fb4c7c9c0
 ORIGINAL_IPA_URL="https://archive.org/download/i-3-u-so-com.julienadam.cassius-1.04/I-3-U-SO-com.julienadam.cassius-1.04.ipa"
 ORIGINAL_ICON_URL="https://web.archive.org/web/20240111215624if_/https://is4-ssl.mzstatic.com/image/thumb/Purple/2b/df/56/mzi.rptjtlhi.png/738x0w.png"
 IPA_NAME="iloveusomuch.ipa"
+GITHUB_REPOSITORY_NAME="michaelwright235/iloveusomuch"
 
 ORIGINAL_ZIP_PATH="Payload/Cassius.app/"
 ORIGINAL_ZIP_FILES=(
@@ -33,6 +34,21 @@ while [ "$choice" != "n" ] && [ "$choice" != "y" ]; do
 done
 if [ "$choice" == "n" ]; then
     exit 0
+fi
+
+# Download the latest iloveusomuch.ipa release
+if [ "$1" != "project" ]; then
+    loveusomuchurl=`curl -s "https://api.github.com/repos/$GITHUB_REPOSITORY_NAME/releases/latest" \
+    | grep "browser_download_url.*ipa" \
+    | cut -d : -f 2,3 \
+    | tr -d \" \
+    | tr -d '[:blank:]'`
+    echo "Downloading the latest iloveusomuch.ipa..."
+    curl -SLo "./$IPA_NAME" "$loveusomuchurl"
+    if ! [ $? = 0 ]; then
+        echo "Failed to download iloveusomuch.ipa"
+        exit 1
+    fi
 fi
 
 # Download the original ipa file if it doesn't exit
