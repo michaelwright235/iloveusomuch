@@ -10,6 +10,13 @@
 @synthesize videosPlayer;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    // If the video was paused (by playing music, incoming call, etc) we can start
+    // playing it by touching
+    AVPlayer* player = [[self videosPlayer] player];
+    if ((player.rate == 0) || (player.error != nil)) {
+        [player play];
+    }
+
     if([touches count] == 1) {
         self->swipeXStart = [[touches anyObject] locationInView: self].x;
         self->posXStart = [self.videosPlayer frame].origin.x;
