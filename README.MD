@@ -26,14 +26,14 @@ Every iOS app is contained inside a special `.ipa` file. You need to "make" one 
 ### Manual/Windows
 
 1. Download the latest `iloveusomuch.ipa` from *Releases* tab.
-2. Download [an archived version](https://archive.org/download/i-3-u-so-com.julienadam.cassius-1.04/I-3-U-SO-com.julienadam.cassius-1.04.ipa") of the original app.
+2. Download [an archived version](https://archive.org/download/i-3-u-so-com.julienadam.cassius-1.04/I-3-U-SO-com.julienadam.cassius-1.04.ipa) of the original app.
 3. Change both files' extention to `.zip`.
 4. Download the original app icon [here](https://web.archive.org/web/20240111215624if_/https://is4-ssl.mzstatic.com/image/thumb/Purple/2b/df/56/mzi.rptjtlhi.png/738x0w.png). Rename this file to `AppIcon.png`.
 5. Open `I-3-U-SO-com.julienadam.cassius-1.04.zip` with your archiver. You need to extract these files:
-   - Payload/Cassius.app/background.png
-   - Payload/Cassius.app/loader@2x.png
-   - Payload/Cassius.app/Loader.m4v
-   - Payload/Cassius.app/Videos.m4v
+   - `Payload/Cassius.app/background.png`
+   - `Payload/Cassius.app/loader@2x.png`
+   - `Payload/Cassius.app/Loader.m4v`
+   - `Payload/Cassius.app/Videos.m4v`
 6. Rename an extracted `loader@2x.png` file to `loader.png`.
 7. Open `iloveusomuch.zip` with your archiver. Put previosly extracted files and `AppIcon.png` in a folder `Payload/iloveusomuch.app/` of this archive.
 8. Rename `iloveusomuch.zip` back to `iloveusomuch.ipa`. This is a file you need to sideload onto your device.
