@@ -25,6 +25,7 @@ else
     OUT_DIR="./Payload/iloveusomuch.app"
 fi
 
+echo "I <U SO MUCH: Remake of \"I <U SO\" app by Cassius"
 echo "This script injects assets from the original app into an .ipa file or the Xcode project itself."
 echo "The original app files are going to be downladed. Those files contain copyrighted materials."
 printf "\033[0;31m$(tput bold)You CANNOT distribute the resulting $IPA_NAME file in any way. For personal use only.$(tput sgr0)\033[0m\n"
