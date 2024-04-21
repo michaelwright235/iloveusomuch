@@ -11,7 +11,7 @@ In order to run the app, please follow the next two sections.
 
 ## Preparing an .ipa file
 
-Every iOS app is contained inside a special `.ipa` file. You need to "make" one to sideload (install) it onto your device. I can only publish such files without the original videos and graphics because it's copyrighted. **Therefore the app from *Releases* section won't work out of the box!** However it's pretty easy to inject those files yourself, here is a simple instruction!
+Every iOS app is contained inside of a `.ipa` file. You need to prepare one to sideload (install) it onto your device. I can only publish such files without the original videos and graphics because they're copyrighted. **Therefore the app from *Releases* section won't work out of the box!** However it's pretty easy to inject those files yourself, here is a simple instruction!
 
 ### macOS & Linux
 
@@ -21,9 +21,9 @@ Every iOS app is contained inside a special `.ipa` file. You need to "make" one 
 4. Run `sh -c "$(curl -sSL "https://raw.githubusercontent.com/michaelwright235/iloveusomuch/master/inject.sh")"` command.
 5. Read an appeared message carefully. If you agree, type `y` and press Enter.
 6. Downloading necessary files and injecting them may take a while.
-7. After a successful injecting you can find an `iloveusomuch.ipa` file in a directory from the first step. This is a file you need to sideload onto your device.
+7. After a successful injecting you can find the `iloveusomuch.ipa` file in a directory from the first step. This is a file you need to sideload onto your device.
 
-### Manual/Windows
+### Manual & Windows
 
 1. Download the latest `iloveusomuch.ipa` from *Releases* tab.
 2. Download [an archived version](https://archive.org/download/i-3-u-so-com.julienadam.cassius-1.04/I-3-U-SO-com.julienadam.cassius-1.04.ipa) of the original app.
@@ -34,8 +34,8 @@ Every iOS app is contained inside a special `.ipa` file. You need to "make" one 
    - `Payload/Cassius.app/loader@2x.png`
    - `Payload/Cassius.app/Loader.m4v`
    - `Payload/Cassius.app/Videos.m4v`
-6. Rename an extracted `loader@2x.png` file to `loader.png`.
-7. Open `iloveusomuch.zip` with your archiver. Put previosly extracted files and `AppIcon.png` in a folder `Payload/iloveusomuch.app/` of this archive.
+6. Rename the extracted `loader@2x.png` file to `loader.png`.
+7. Open `iloveusomuch.zip` with your archiver. Put previosly extracted files and `AppIcon.png` in the folder `Payload/iloveusomuch.app/` of this archive.
 8. Rename `iloveusomuch.zip` back to `iloveusomuch.ipa`. This is a file you need to sideload onto your device.
 
 ## Sideloading
@@ -90,7 +90,7 @@ This project aims to support the vast majority of iOS versions that cannot run t
    - A slightly different font (a font under Open Font License).
    - *Play* button has a slightly different description.
    - *Share* button has a different icon (it was a Facebook logo previously). A description text has been slightly changed and pressing it opens a familiar iOS share screen where you can share a link of this project.
-   - *Buy* button is replaced with a *Listen* button. Many things have changed since 2010, including an explosion of streaming services popularity. So I decided to implement a popup with links to popular streaming services instead.
+   - *Buy* button is replaced with *Listen* button. Many things have changed since 2010, including the explosion of streaming services popularity. So I decided to implement a popup with links to popular streaming services instead.
 2. No bottom copyright text.
 3. A loading screen disappears with a pleasant animation.
 
